@@ -1,0 +1,8 @@
+
+Ncpase.xml
+<HTML_LANG:div name=”d1” xmlns:HTML_LANG=”http://www.w3.org/TR/REC-html40”>
+<HTML_LANG:h1>imie i nazwisko:</HTML_LANG:h1>
+<HTML_LANG:h2>autor - Jan Kowal</HTML_LANG:h2>
+<HTML_LANG:p>tytul: algorytm i struktury danych </HTML_LANG:p>
+<HTML_LANG:img src=”genetyka.jpg”/>
+</HTML_LANG:div>
