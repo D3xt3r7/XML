@@ -1,0 +1,46 @@
+
+<!DOCTYPE firma SYSTEM „firma_deklaracja.dtd”>
+<firma>
+	<klient>
+		<opis>to jest moj klient z dnia 09.09.2016</opis>
+		<nazwisko>Kowal</nazwisko>
+		<imie>Jan</imie>
+		<adres>
+			<miasto>Warszawa</miasto>
+			<ulica>Jasielska 23</ulica>
+			<kod>02-200</kod>
+		</adres>
+		<telefon>777-888-999</telefon>
+		<e-mail>przykladowy_email@gmail.com</e-mail>
+		<fotka></fotka>
+	</klient>
+	<klient>
+		<opis>to jest moj klient z dnia 10.10.2016</opis>
+		<nazwisko>Orzech</nazwisko>
+		<imie>Waclaw</imie>
+		<adres>
+			<miasto>Lublin</miasto>
+			<ulica>Piekna 5</ulica>
+			<kod>03-200</kod>
+		</adres>
+		<telefon>111-111-333</telefon>
+		<e-mail>owac@gmail.com</e-mail>
+<fotka></fotka>
+	</klient>
+</firma>
+
+Deklaracja DTD
+Firma_deklaracja.dtd
+<!ELEMENT klient((#PCDATA|nazwisko|nazwa_firmy)+, imie+, adres, telefon*, e-mail)>
+<!ELEMENT klient(#PCDATA)>
+<!ELEMENT nazwisko(#PCDATA)>
+<!ELEMENT imie(#PCDATA)>
+<!ELEMENT telefon(#PCDATA)>
+<!ELEMENT e-mail(#PCDATA)>
+<!ELEMENT fotka EMPTY>
+<!ELEMENT opis ANY>
+<!ELEMENT adres (miasto, ulica, kod?)>
+<!ELEMENT miasto(#PCDATA)+>
+<!ELEMENT ulica(#PCDATA)>
+<!ELEMENT kod(#PCDATA)>
+

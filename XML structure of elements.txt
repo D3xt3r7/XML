@@ -1,0 +1,30 @@
+xml
+
+<firma>
+<!-- element root -->
+	<klient>
+	<!-- element parent -->
+		<nazwisko>Kowal</nazwisko>
+		<!-- element child -->
+		<imie>Jan</imie>
+		<adres>
+			<miasto>Warszawa</miasto>
+			<!-- elementy sibling wzgledem siebie i child wobec elementu adres -->
+			<ulica>Jasielska 23</ulica>
+			<kod>02-200</kod>
+		</adres>
+		<telefon>777-888-999</telefon>
+		<e-mail>przykladowy_email@gmail.com</e-mail>
+	</klient>
+	<klient>
+		<nazwisko>Orzech</nazwisko>
+		<imie>Waclaw</imie>
+		<adres>
+			<miasto>Lublin</miasto>
+			<ulica>Piekna 5</ulica>
+			<kod>03-200</kod>
+		</adres>
+		<telefon>111-111-333</telefon>
+		<e-mail>owac@gmail.com</e-mail>
+	</klient>
+</firma>

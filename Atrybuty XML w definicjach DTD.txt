@@ -1,0 +1,16 @@
+
+<!DOCTYPE auta [
+<!ELEMENT auto(auto*)>
+<!ELEMENT auto EMPTY>
+<!ATTLIST auto
+Marka CDATA #REQUIRED
+Typ CDATA #REQUIRED
+Rocznik NMTOKEN #IMPLIED
+Salon NMTOKEN #FIXED “AutoBBB”
+Moc (212|180|150) “150”
+]>
+<auta>
+	<auto marka= ”Peugeot”	typ=”508”	rocznik=”2012”	przebieg=”12300”	salon=”AutoBBB”/>
+	<auto marka= „Nissan	typ=”Juke”	rocznik=”2009”	pojemność=”1,6”/>
+	<auto marka=”Opel”		typ=”Insignia”	moc=”212”	rocznik=”2009”	przebieg=”5120”	pojemność=”2.5”/>
+</auta>

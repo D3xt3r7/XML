@@ -1,0 +1,19 @@
+
+<!ENTITY NazwaEncji WartoscEncji>
+<!ENTITY % klient “Pan/Pani”>
+	<!ENTITY nazwa “%klient, nowa nazwa”>
+
+<klient>&klient jest zaproszony</klient>
+Encje XML
+<!DOCTYPE auta [
+<!ENTITY %sam “ – samochod”>
+<!ENTITY marka “Opel, %sam;”>
+<!ELEMENT auta(auto)*
+<!ELEMENT auto(#PCDATA)>
+]>
+
+<auta>
+	<auto>
+	&marka; – jest do odbioru
+	</auto>
+</auta>
