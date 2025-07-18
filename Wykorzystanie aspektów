@@ -1,0 +1,11 @@
+Wykorzystanie aspektów
+Asp1.xsd
+<xsd:schema xmlns:xsd=http://www.w3.org/2001/XMLSchema>
+<xsd:simpleType name=”pojsilnika”>
+<xsd:restriction base=”xsd:float”>
+<xsd:minInclusive value=”0.6”/>
+<xsd:maxInclusive value=”8.7”/>
+</xsd:restriction>
+</xsd:simpleType>
+
+</xsd:schema>
