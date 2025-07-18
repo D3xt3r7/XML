@@ -1,0 +1,20 @@
+Aspekty wymuszające wartości tekstowe
+<xsd:schema xmlns:xsd=http://www.w3.org/2001/XMLSchema>
+<xsd:simpleType name=”autoTyp>
+
+<xsd:restriction base=”xsd:string”>
+<xsd:minLength value=”3” fixed =”true”/>
+<xsd:maxLength value=”25” />
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:schema>
+
+Aspekty wymuszające oparte na wzorcach wartości
+<xsd:schema xmlns:xsd=http://www.w3.org/2001/XMLSchema>
+<xsd:simpleType name=”tablicaRej”>
+<xsd:restriction base=”xsd:string”>
+<xsd:pattern value=”LU+\s+\d[5]”/>
+<xsd:pattern value=”L[A-Z](1,2)+\s[A-Z0-9](5)”/>
+<xsd:restriction>
+<xsd:simpleType>
+</xsd:schema>
