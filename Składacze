@@ -1,0 +1,47 @@
+Składacze typu sequence
+
+<xsd:schema xmlns:xsd=http://www.w3.org/2001/XMLSchema>
+<xsd:element name=”projekt”>
+<xsd:complexType name=pr1”>
+<xsd:sequence>
+<xsd:element name=”analiza” type=”xsdLstring”/>
+<xsd:element name=”wykonanie” type=”xsd:string”/>
+<xsd:element name=”wdrozenie” type=”xsd:string”/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>
+
+Składacze typu choice
+
+<xsd:schema xmlns:xsd=http://www.w3.org/2001/XMLSchema>
+<xsd:element name=”check”>
+<xsd:complexType name=”ch1”>
+<xsd:choice>
+<xsd:element name=”zaznaczony” tyoe=”xsd:string”/>
+<xsd:element name=”niezaznaczony” type=”xsd:string”/>
+</xsd:choice>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>
+
+Składacze typu all
+
+<xsd:schema xmlns:xsd=http://www.w3.org/2001/XMLSchema>
+<xsd:element name=”samochody”>
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element name=”marka” maxOccurs=”45”>
+				<xsd:complexType>
+					<xsd:all>
+						<xsd:element name=”marka” type=”xsd:string”/>
+						<xsd:element name=”typ” type=”xsd:string”/>
+						<xsd:element name=”nr_rej” type=”xsd:string” minOccurs=”1” />
+					</xsd:all>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+</xsd:schema>
+
