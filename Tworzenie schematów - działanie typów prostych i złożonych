@@ -1,0 +1,23 @@
+
+
+Daneauta.big.xml
+<auto xmlns:xsi=http://www.w3.org/2001XMLSchema-instance
+	xsi:noNamescpaceSchemaLocation=”autoschema.xsd”>
+<opis>Opis samochodu…</opis>
+	<marka>Opel Insignia</marka>
+	<kolor>czarny</kolor>
+	<nr_rejestr>RZ09887</nr_rejestr>
+	<poj>1,8</poj>
+</auto>
+Autoschema.xsd
+<xsd:schema xmlns:xsd=http://www.w3.org/2001/XMLSchema>
+<xsd:element name=”auto” type=”xsd:string”>	
+<xsd:complexType name=”daneAuta”>
+<xsd:all>
+<xsd:element name=”marka” type=”xsd:string” />
+<xsd:element name=”nr_rejestr” type=”xsd:string” minOccurs=”1” />
+<xsd:element name=”poj” type=”xsd:float” />
+</xsd:all>
+</xsd:complexType>
+<xsd:element name=”auto” type=”daneAuta” maxOccurs=”unbounded” />
+</xsd:schema>
