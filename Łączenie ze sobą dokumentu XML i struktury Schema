@@ -1,0 +1,16 @@
+Definiowanie XML Schema
+
+<xsd: schema xmlns:xsd=http://www.w3.org/2001/XMLSchema>
+<xsd:element name=”marka” type=”xsd:string”>
+<xsd:attribute name=”kolor” type=”xsd:string”>
+</xsd:schema>
+
+Łączenie ze sobą dokumentu XML i struktury Schema
+<auto xmlns:xsi=http://www.w3.org/2001/XMLSchema-instance xsi:schemaLocation=”autoschema.xsd”>
+<marka>Opel Insignia</marka>
+<kolor>czarny</kolor>
+</auto>
+Autoschema.xsd
+<xsd:schema xmlns:xsd=http://www.w3.org/2001/XMLSchema>
+<xsd:element name=”auto” type=”xsd:string”>
+</xmd:schema>
