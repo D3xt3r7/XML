@@ -1,0 +1,20 @@
+
+
+<!ENTITY %wersja_osobowa “INCLUDE”>
+<!ENTITY %wersja_dostawcza “IGNORE”>
+
+
+<!ENTITY [%wersja_osobowa;	[
+<!ENTITY % nazwa_auta “nazwa_auta_osobowego”>
+<!ELEMENT nazwa_auta_osobowego (#PCDATA)>
+]]>
+
+<!ENTITY [%wersja_dostawcza;	[
+<!ENTITY % nazwa_auta “marka,typ”>
+<!ELEMENT marka (#PCDATA)>
+<!ELEMENT typ (#PCDATA)>
+]]>
+
+<!ELEMENT auto (%nazwa_auta;)>
+
+
