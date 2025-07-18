@@ -1,0 +1,12 @@
+Typy złożone atrybutów i ich wystąpienia
+
+<xsd:schema xmlns:xsd=http://www.w3.org/2001/XMLSchema>
+	<xsd:element name=”muzyk” type=”typMuzyk”/>
+	<xsd:simpleContent>
+		<xsd:extension base=”muzyka”>
+			<xsd:attribute name=”mazwa_wykonawcy” type=”xsd:token” use=”required”/>
+			<xsd:attribute name=”rodzaj_muzyki” type=”xsd:token” use=”optional”/>
+		</xsd:extension base=”muzyka”>
+	</xsd:simpleContent>
+</xsd:schema>
+
