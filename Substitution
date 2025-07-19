@@ -1,0 +1,27 @@
+Zastosowanie elementu Substitution
+
+<katalog>
+<produkt>PP01</produkt>
+</katalog>
+
+<katalog>
+<tablet>PP02</tablet>
+</katalog>
+
+<katalog>
+<komputer>PP04</komputer>
+</katalog>
+
+Subs.xsd
+<xsd:schema xmlns:xsd=http://www.w3.org/2001/XMLSchema>
+<xsd:element name=”katalog”>
+	<xsd:complexType name=”ProduktTyp”>
+		<xsd:sequence>
+			<xsd:element ref=”produkt” maxOccurs=”unbounded” />
+		<xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+<xsd:element name=”produkt” type=”ProduktTyp” />
+<xsd:element name=”komputer” type=”KomputerTyp” substitusionGroup=”produkt” />
+<xsd: element name=”tablet” type=”TabletTyp” substitutionGroup=”produkt” />
+</xsd:schema>
