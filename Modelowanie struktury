@@ -1,0 +1,53 @@
+Modelowanie struktury z zastosowaniem wzorca Russian Doll
+
+<xsd:schema xmlns:xsd=http://www.w3.org/2001/XMLSchema>
+	<xsd:element name=”Book” >
+		<xsd:sequence>
+			<xsd:element name=”Tytul” type=”xsd:string”/>
+			<xsd:element name=”Autor” type=”xsd:string”/>
+		<xsd:sequence>
+	</xsd:element>
+</xsd:schema>
+
+Modelowanie struktury z zastosowaniem wzorca Salami Slice
+
+<xsd:schema xmlns:xsd=http://www.w3.org/2001/XMLSchema>
+<xsd:element name=”Tytul” type=”xsd:string”/>
+<xsd:element name=”autor” type=”xsd:string”/>
+
+<xsd:element name=”Book” >
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element ref=”Tytul”/>
+			<xsd:element ref=”Autor”/>
+		</xsd:sequence>
+</xsd:element>
+</xsd:schema>
+
+
+
+Modelowanie struktury z zastosowaniem wzorca Venetian Bold
+
+<xsd:schema xmlns:xsd=http://www.w3.org/2001/XMLSchema>
+<xsd:simpleType name=”Tytul”>
+	<xsd:restriction base=”xsd:string”>
+		<xsd:enumeration value=”Czasopismo” />
+		<xsd:enumeration value=”Ksiazka” />
+		<xsd:enumeration value=”Skrypt” />
+	</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name=”Nazwisko”>
+	<xsd:restriction base=”xsd:string”>
+		<xsd:minlength value=”3” />
+	</xsd:restriction>
+</xsd:simpleType>
+<xsd:complexType name=”Publikacja”>
+	<xsd:sequence>
+		<xsd:element name=”title” type=”Tytul” />
+		<xsd:element name=”author” type=”Nazwisko” />
+	</xsd:sequence>
+</xsd:complexType>
+<xsd:element name=”Book” type=”Publikacja” />
+</xsd:schema>
+
+
