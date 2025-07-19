@@ -1,0 +1,36 @@
+Transformacje i formatowanie XSLT
+
+<?xml-stylesheet type=”text/xsl” href=”film.xsl”?>
+<SPIS>
+	<FILM>
+		<TYTUL>Hobbit</TYTUL>
+		<REZYSER>Peter Jackson</REZYSER>
+		<GATUNEK>FANTASY</GATUNEK>
+		<CENA_BILETU>27 zl</CENA BILETU>
+	</FILM>
+	<FILM>
+		<TYTUL>Gwiezdne Wojny</TYTUL>
+		<REZYSER>George Lucas</REZYSER>
+		<ROK>1979</ROK>
+		<GATUNEK>SCI-FI</GATUNEK>
+		<CENA_BILETU>26 zl</CENA BILETU>
+	</FILM>
+	<FILM>
+		<TYTUL>DUCH</TYTUL>
+		<REZYSER>Steven Spielberg</REZYSER>
+		<ROK>1984</ROK>
+		<GATUNEK>SCI-FI</GATUNEK>
+		<CENA_BILETU>26 zl</CENA BILETU>
+	</FILM>
+
+Film.xsl
+<xsl:stylesheet version=”1.0” xmlns:xsl=http://www.w3.org/1999/XSL/Transform>
+<xsl:output method=”html” />
+<xsl:template match=”/”>
+<html>
+<xsl:apply-templates />
+</html>
+</xsl:template>
+</xsl:stylesheet>
+
+
