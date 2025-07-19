@@ -1,0 +1,28 @@
+Dowolny element: xs:any
+
+<xsd:schema xmlns:xsd=http://www.w3.org/2001/XMLSchema>
+<xsd:element name=”htmlTEXT”>
+	<xsd:complexType>
+	<xsd:sequence>
+		<xsd:any namespace=http://www.w3.org/1999/xhtml minoCCURS=”1”
+		maxOccurs=”unbounded” processContents=”lax” />
+	</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>
+
+xs:anyAttribute
+
+<xsd:schema xmlns:xsd=http://www.w3.org/2001/XMLSchema>
+<xsd:element name=”elAtrybut” >
+	<xsd:complexType>
+		<xsd:simpleContent>
+			<xsd:extension base=”xsd:string”>
+				<xsd:anyAtribute namespace=”##targetNamespace” />
+			</xsd:extension>
+		<xsd:simpleContent>
+	</xsd:complexType>
+</xsd:element>
+</xsd:schema>
+
+
+
