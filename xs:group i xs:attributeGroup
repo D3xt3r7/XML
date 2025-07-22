@@ -25,16 +25,16 @@ Użycie grup xs:group i xs:attributeGroup
 				</xsd:complexType>
 </xsd:element>
 			
-		<xsd:element name=”pikarz”>
-			<xsd:complexType>
-				<xsd:sequence>
-					<xsd:group ref=”druzyna />
-					<xsd:element name=”kontrakt” type=”xsd:string” />
-				</xsd:sequence>
-				<xsd:attributeGroup ref=”druzyna” />
-				<xsd:attribute name=”stadion” type=”xsd:string” />
-			</xsd:complexType>
-		</xsd:element>
+			<xsd:element name=”pikarz”>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:group ref=”druzyna />
+						<xsd:element name=”kontrakt” type=”xsd:string” />
+					</xsd:sequence>
+					<xsd:attributeGroup ref=”druzyna” />
+					<xsd:attribute name=”stadion” type=”xsd:string” />
+				</xsd:complexType>
+			</xsd:element>
 </xsd:schema>
 
 
