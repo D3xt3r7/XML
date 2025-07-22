@@ -1,40 +1,42 @@
 Użycie grup xs:group i xs:attributeGroup
 
-<xsd:schema xmlns:xsd=http://www.w3.org/2001/XMLSchema>
-<xsd:group name=”druzyna”>
-	<xsd:sequence>
-		<xsd:element name=”nazwa” type=”xsd:string” />
-		<xsd:element name=”miasto” type=”xsd:string” />
-	</xsd:sequence>
-</xsd:group>
-<xsd:attributeGroup name=”druzynaAtrybut”>
-	<xsd:attribute name=”trener” type=”xsd:string” />
-	<xsd:attribute name=”budzet” type=”xsd:float” />
-</xsd:attributeGroup>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:group name="druzyna">
+    <xsd:sequence>
+      <xsd:element name="nazwa" type="xsd:string"/>
+      <xsd:element name="miasto" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:group>
 
-<xsd:element name=”klub”>
-<xsd:complexType>
-		<xsd:choice>
-			<xsd:element name=”rozgrywka”>
-				<xsd:complexType>
-					<xsd:sequence>
-						<xsd:group ref=”druzyna />
-						<xsd:element name=”miejsce” type=”xsd:decimal” />
-					</xsd:sequence>
-					<xsd:attributeGroup ref=”druzynaAtrybut”. />
-				</xsd:complexType>
-</xsd:element>
-			
-			<xsd:element name=”pikarz”>
-				<xsd:complexType>
-					<xsd:sequence>
-						<xsd:group ref=”druzyna />
-						<xsd:element name=”kontrakt” type=”xsd:string” />
-					</xsd:sequence>
-					<xsd:attributeGroup ref=”druzyna” />
-					<xsd:attribute name=”stadion” type=”xsd:string” />
-				</xsd:complexType>
-			</xsd:element>
+  <xsd:attributeGroup name="druzynaAtrybut">
+    <xsd:attribute name="trener" type="xsd:string"/>
+    <xsd:attribute name="budzet" type="xsd:float"/>
+  </xsd:attributeGroup>
+
+  <xsd:element name="klub">
+    <xsd:complexType>
+      <xsd:choice>
+        <xsd:element name="rozgrywka">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:group ref="druzyna"/>
+              <xsd:element name="miejsce" type="xsd:decimal"/>
+            </xsd:sequence>
+            <xsd:attributeGroup ref="druzynaAtrybut"/>
+          </xsd:complexType>
+        </xsd:element>
+
+        <xsd:element name="piłkarz">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:group ref="druzyna"/>
+              <xsd:element name="kontrakt" type="xsd:string"/>
+            </xsd:sequence>
+            <xsd:attributeGroup ref="druzynaAtrybut"/>
+            <xsd:attribute name="stadion" type="xsd:string"/>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
 </xsd:schema>
-
-
