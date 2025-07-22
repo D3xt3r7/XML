@@ -4,7 +4,7 @@ Dowolny element: xs:any
 <xsd:element name=”htmlTEXT”>
 	<xsd:complexType>
 	<xsd:sequence>
-		<xsd:any namespace=http://www.w3.org/1999/xhtml minoCCURS=”1”
+		<xsd:any namespace=http://www.w3.org/1999/xhtml minOccurs=”1”
 		maxOccurs=”unbounded” processContents=”lax” />
 	</xsd:sequence>
 	</xsd:complexType>
